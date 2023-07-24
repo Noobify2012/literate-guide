@@ -25,9 +25,24 @@ int[] getArray() {
 
 void main() {
 
+    writeln("10 Fib count");
+
     auto arr = getArray();
     foreach (e; 0..10) {
         writeln("fib value: " ~ to!string(arr[e]));
+    }
+
+    writeln("whats the size of the array? " ~ to!string(arr.length));
+
+    writeln("How about a few slices.");
+
+    int e = 0;
+    while (e < 10) {
+        writeln("\nIndex of E: " ~ to!string(e));
+        foreach (f; e..10) {
+            writeln("current index: " ~ to!string(f) ~ " current value: " ~ to!string(arr[f]));
+        }
+        e++;
     }
 
 
